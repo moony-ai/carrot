@@ -1,5 +1,5 @@
 """
-URL configuration for carrot project.
+URL configuration for config project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -15,10 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from carrot_ai.views import hello
+from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('hello/', hello),
+    path("api/v1/news/", include("news.urls")),
+    path("api/v1/genai/", include("genai.urls")),
+    path("api/v1/users/", include("users.urls"))
 ]
