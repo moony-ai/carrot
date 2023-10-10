@@ -1,0 +1,1 @@
+print("hello!, you just activate main.py!")

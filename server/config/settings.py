@@ -37,6 +37,7 @@ OTHER_APPS = [
 CUSTOM_APPS = [
     "users",
     "news",
+    "genai",
 ]
 
 SYSTEM_APPS = [
