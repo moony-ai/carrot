@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-dm$_c^20kfk&p*uwc-rs#%bav1n52-qbtx@%3(r@lb+6@r@sz+
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "localhost",
+    "127.0.0.1",
     "15.164.97.113",
     "3.34.227.241",
     "moonshots.work",
