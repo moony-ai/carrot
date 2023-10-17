@@ -33,3 +33,4 @@ class Prompt(store_info):
     - The contents you generate need to be in a box
     - please use Korean only
     """
+    return prompt
