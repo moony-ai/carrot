@@ -8,7 +8,10 @@ from .prompts import Prompt
 
 from .models import Genai
 from .serializers import GenaiSerializer
-openai.api_key = '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'
+
+import os
+api_key = os.environ.get("API_KEY")
+openai.api_key = api_key
 
 class Genai(APIView):
     def post(self, request):
