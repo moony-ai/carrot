@@ -1,3 +1,4 @@
+import os
 """
 Django settings for config project.
 
@@ -133,6 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "static/") #static 폴더를 만들고 거기에 static파일들을 저장하기 위해
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
