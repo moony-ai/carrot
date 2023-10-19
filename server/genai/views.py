@@ -11,7 +11,7 @@ from .serializers import GenaiSerializer
 
 import os
 api_key = os.environ.get("API_KEY")
-openai.api_key = "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"
+openai.api_key = api_key
 
 class Genai(APIView):
     def post(self, request):
