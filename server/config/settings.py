@@ -1,3 +1,4 @@
+import os
 """
 Django settings for config project.
 
@@ -27,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "localhost",
-    "15.164.97.113",
+    "127.0.0.1",
     "3.34.227.241",
     "moonshots.work",
 ]
@@ -133,6 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
