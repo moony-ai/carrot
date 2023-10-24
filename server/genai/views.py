@@ -10,7 +10,7 @@ from .models import Genai
 from .serializers import GenaiSerializer
 
 import os
-api_key = os.environ.get("API_KEY")
+api_key = os.environ.get("OPEN_API_KEY")
 openai.api_key = api_key
 
 class Genai(APIView):
@@ -46,5 +46,5 @@ def chatGPT(store_info):
         "role" : response['choices'][0]['message']['role'],
         "content" : response['choices'][0]['message']['content']
     })
-    
+    print(Prompt.get_prompt(store_info))
     return response['choices'][0]['message']['content']
