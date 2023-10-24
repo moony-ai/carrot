@@ -16,10 +16,12 @@ openai.api_key = api_key
 class Genai(APIView):
     def post(self, request):
         serializer = GenaiSerializer(data=request.data)
+        print("request.POST = ", request.POST)
+        print("request.data = ", request.data)
         store_info = {
-            "name" : request.data["name"],
-            "purpose": request.data["purpose"],
-            "contents": request.data["contents"],
+            "name" : request.data.get("name"),
+            "purpose": request.data.get("purpose"),
+            "contents": request.data.get("contents"),
         }
         output = chatGPT(store_info)
         if serializer.is_valid():
@@ -46,5 +48,5 @@ def chatGPT(store_info):
         "role" : response['choices'][0]['message']['role'],
         "content" : response['choices'][0]['message']['content']
     })
-    print(Prompt.get_prompt(store_info))
+    print("prompt = ", Prompt.get_prompt(store_info))
     return response['choices'][0]['message']['content']
