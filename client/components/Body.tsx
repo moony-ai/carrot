@@ -22,7 +22,7 @@ import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 import LoadingDots from '@/components/ui/loadingdots';
 import va from '@vercel/analytics';
 import { PromptSuggestion } from '@/components/ContentSuggestionProps';
-import { useRouter } from 'next/navigation';
+//import { useRouter } from 'next/navigation';
 import { toast, Toaster } from 'react-hot-toast';
 import { storeNewsService } from '@/utils/StoreNewsService';
 import { ResultProps } from '@/components/ResultProps';
@@ -43,19 +43,13 @@ const generateFormSchema = z.object({
 
 type GenerateFormValues = z.infer<typeof generateFormSchema>;
 
-
-interface BodyProps {
-  message: string;
-}
-
-
 const Body = ({ message }: { message?:string; }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
   const [response, setResponse] = useState<GenerateStoreNewsResponse | null>(null);
   const [dynamicSuggestions, setDynamicSuggestions] = useState<string[]>(contentSuggestions);
 
-  const router = useRouter();
+  // const router = useRouter();
 
   const form = useForm<GenerateFormValues>({
     resolver: zodResolver(generateFormSchema),

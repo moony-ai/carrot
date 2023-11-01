@@ -1,3 +1,5 @@
+'use client';
+
 import { GenerateStoreNewsRequest, GenerateStoreNewsResponse } from '@/utils/service';
 import {storeNewsService} from '@/utils/StoreNewsService'
 import { useEffect, useState } from 'react';
