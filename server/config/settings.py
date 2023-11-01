@@ -26,13 +26,15 @@ SECRET_KEY = "django-insecure-dm$_c^20kfk&p*uwc-rs#%bav1n52-qbtx@%3(r@lb+6@r@sz+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 ALLOWED_HOSTS = [
     "localhost",
     "15.164.97.113",
     "3.34.227.241",
     "moonshots.work",
+    "127.0.0.1",
 ]
-
 
 # Application definition
 OTHER_APPS = [
@@ -44,6 +46,7 @@ CUSTOM_APPS = [
     "users",
     "news",
     "genai",
+    'corsheaders',
 ]
 
 SYSTEM_APPS = [
@@ -65,6 +68,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = "config.urls"

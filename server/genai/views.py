@@ -10,7 +10,7 @@ from .models import Genai
 from .serializers import GenaiSerializer
 
 import os
-api_key = os.environ.get("OPEN_API_KEY")
+api_key = api_key = os.environ.get("OPEN_API_KEY")
 openai.api_key = api_key
 
 class Genai(APIView):
