@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [
     "15.164.97.113",
     "3.34.227.241",
     "moonshots.work",
+    "moonies.xyz",
     "127.0.0.1",
 ]
 
