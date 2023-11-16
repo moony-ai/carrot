@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const navigation = [
     // { title: 'Testimonials', path: '#testimonials' },
-    { title: 'Homepage', path: '/' },
+    { title: '홈페이지', path: '/' },
   ];
 
   const pathname = usePathname();
@@ -104,7 +104,7 @@ const Navbar = () => {
                   href="/start"
                   className="block font-medium text-sm text-white bg-gray-800 hover:bg-gray-600 active:bg-gray-900 md:inline"
                 >
-                  Generate your Business Contents
+                  비즈니스 소식 생성
                 </NavLink>
               </li>
             </ul>

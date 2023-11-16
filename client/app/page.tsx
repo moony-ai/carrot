@@ -6,7 +6,7 @@ import GoogleAnalytics from '@/components/GoogleAnalytics';
 export default function Home() {
   return (
     <>
-      <GoogleAnalytics /> {/* Google Analytics 컴포넌트 추가 */}
+      <GoogleAnalytics />
       <Hero />
       <GradientWrapper></GradientWrapper>
       <CTA />

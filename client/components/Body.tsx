@@ -129,7 +129,7 @@ const Body = ({ message }: { message?:string; }) => {
     <div className="flex justify-center items-center flex-col w-full lg:p-0 p-4 sm:mb-28 mb-0">
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 mt-10">
         <div className="col-span-1">
-          <h1 className="text-3xl font-bold mb-10">Generate a Business News</h1>
+          <h1 className="text-3xl font-bold mb-10">비즈니스 소식 생성</h1>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(handleSubmit)}>
               <div className="flex flex-col gap-4">
@@ -187,14 +187,14 @@ const Body = ({ message }: { message?:string; }) => {
                   type="submit"
                   disabled={isLoading}
                   className="inline-flex justify-center
-                 max-w-[200px] mx-auto w-full"
+                 max-w-[200px] mx-auto w-full text-lg"
                 >
                   {isLoading ? (
                     <LoadingDots color="white" />
                   ) : response ? (
-                    '✨ Regenerate'
+                    '✨ 다시 생성'
                   ) : (
-                    'Generate'
+                    '소식 생성'
                   )}
                 </Button>
 
@@ -213,7 +213,7 @@ const Body = ({ message }: { message?:string; }) => {
   { (
     <>
       <h1 className="text-3xl font-bold sm:mb-5 mb-5 mt-5 sm:mt-0 sm:text-center text-left">
-        Business News
+        비즈니스 소식
       </h1>
       <div>
         <div className="flex flex-col justify-center relative h-auto items-center">
@@ -232,7 +232,7 @@ const Body = ({ message }: { message?:string; }) => {
                 console.log("Implement the relevant action for Download here")
               }
             >
-              Download
+              다운로드
             </Button>
             <Button
               variant="outline"
@@ -243,7 +243,7 @@ const Body = ({ message }: { message?:string; }) => {
                 toast.success('Link copied to clipboard');
               }}
             >
-              ✂️ Share
+              ✂️ 복사하기
             </Button>
           </div>
         )}
