@@ -4,7 +4,7 @@ export class StoreNewsService {
   generateStoreNews = async (
     request: GenerateStoreNewsRequest
   ): Promise<GenerateStoreNewsResponse> => {
-    const response = await fetch('https://moonies.xyz/api/v1/genai/', {
+    const response = await fetch('https://3.34.227.241/api/v1/genai/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
