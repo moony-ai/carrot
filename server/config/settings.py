@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
     "3.34.227.241",
     "moonshots.work",
     "moonies.xyz",
+    "mooniesapi.info",
     "127.0.0.1",
 ]
 
